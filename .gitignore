@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+.mypy_cache/
+.ruff_cache/
+.venv/
+.tmp/
+dist/
+build/
+*.egg-info/
+report.md
+report.json
+junit.xml
+_test_report_*.md
+_test_report_*.json
+_test_junit_*.xml

@@ -1,0 +1,16 @@
+k: 5
+
+fail_on:
+  mrr_drop_gt: 0.20
+  recall_drop_gt: 0.10
+  hitrate_drop_gt: 0.05
+
+minimums:
+  mrr_at_k: 0.70
+  recall_at_k: 0.80
+  hitrate_at_k: 0.90
+
+per_query:
+  enforce_must_rank_at_most: true
+  enforce_must_include: true
+  enforce_forbidden_docs: true

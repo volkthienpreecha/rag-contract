@@ -1,0 +1,4 @@
+{"id":"refund_policy","query":"What is the refund policy for enterprise customers?","relevant_doc_ids":["doc_refund_policy"],"must_rank_at_most":3,"tags":["policy"],"weight":2}
+{"id":"sku_b4920","query":"What are the specs for SKU-B4920?","relevant_doc_ids":["sku_catalog_b4920"],"must_rank_at_most":5,"tags":["exact_match"],"weight":1}
+{"id":"hipaa_baa","query":"Do we offer a BAA for HIPAA customers?","relevant_doc_ids":["doc_hipaa_compliance","doc_baa_terms"],"must_rank_at_most":5,"must_include_any":true,"tags":["compliance","high_risk"],"weight":3}
+{"id":"public_pricing","query":"What is public pricing?","relevant_doc_ids":["pricing_public"],"forbidden_doc_ids":["internal_discount_policy"],"must_rank_at_most":3,"tags":["security"],"weight":1}

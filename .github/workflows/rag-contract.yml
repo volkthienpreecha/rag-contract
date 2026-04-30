@@ -1,0 +1,33 @@
+name: RAG Contract Tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  rag-contract:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install rag-contract
+        run: pip install -e ".[dev]"
+
+      - name: Run retriever
+        run: python examples/export_retrieval_run.py --fixture pass --out current.jsonl
+
+      - name: Check retrieval contracts
+        run: |
+          rag-contract check \
+            --golden examples/golden.jsonl \
+            --run current.jsonl \
+            --baseline examples/baseline.json \
+            --config examples/ragcontract.yml \
+            --report-md report.md \
+            --junit junit.xml

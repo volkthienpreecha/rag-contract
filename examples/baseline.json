@@ -1,0 +1,170 @@
+{
+  "version": "1",
+  "created_at": "2026-04-30T00:45:46Z",
+  "k": 5,
+  "aggregate_metrics": {
+    "mrr": 0.9285714285714286,
+    "recall": 1.0,
+    "precision": 0.2857142857142857,
+    "hitrate": 1.0
+  },
+  "tag_metrics": {
+    "compliance": {
+      "mrr": 1.0,
+      "recall": 1.0,
+      "precision": 0.4000000000000001,
+      "hitrate": 1.0
+    },
+    "exact_match": {
+      "mrr": 0.5,
+      "recall": 1.0,
+      "precision": 0.2,
+      "hitrate": 1.0
+    },
+    "high_risk": {
+      "mrr": 1.0,
+      "recall": 1.0,
+      "precision": 0.4000000000000001,
+      "hitrate": 1.0
+    },
+    "policy": {
+      "mrr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2,
+      "hitrate": 1.0
+    },
+    "security": {
+      "mrr": 1.0,
+      "recall": 1.0,
+      "precision": 0.2,
+      "hitrate": 1.0
+    }
+  },
+  "per_query": [
+    {
+      "id": "refund_policy",
+      "query": "What is the refund policy for enterprise customers?",
+      "relevant_doc_ids": [
+        "doc_refund_policy"
+      ],
+      "retrieved_doc_ids": [
+        "doc_refund_policy",
+        "doc_terms",
+        "doc_pricing",
+        "doc_support",
+        "doc_enterprise_faq"
+      ],
+      "metrics": {
+        "mrr": 1.0,
+        "recall": 1.0,
+        "precision": 0.2,
+        "hitrate": 1.0
+      },
+      "ranks": {
+        "doc_refund_policy": 1
+      },
+      "tags": [
+        "policy"
+      ],
+      "weight": 2.0,
+      "must_rank_at_most": 3,
+      "must_include_any": false,
+      "forbidden_doc_ids": []
+    },
+    {
+      "id": "sku_b4920",
+      "query": "What are the specs for SKU-B4920?",
+      "relevant_doc_ids": [
+        "sku_catalog_b4920"
+      ],
+      "retrieved_doc_ids": [
+        "sku_catalog_overview",
+        "sku_catalog_b4920",
+        "sku_catalog_b4921",
+        "sku_specs_archive",
+        "sku_shipping"
+      ],
+      "metrics": {
+        "mrr": 0.5,
+        "recall": 1.0,
+        "precision": 0.2,
+        "hitrate": 1.0
+      },
+      "ranks": {
+        "sku_catalog_b4920": 2
+      },
+      "tags": [
+        "exact_match"
+      ],
+      "weight": 1.0,
+      "must_rank_at_most": 5,
+      "must_include_any": false,
+      "forbidden_doc_ids": []
+    },
+    {
+      "id": "hipaa_baa",
+      "query": "Do we offer a BAA for HIPAA customers?",
+      "relevant_doc_ids": [
+        "doc_hipaa_compliance",
+        "doc_baa_terms"
+      ],
+      "retrieved_doc_ids": [
+        "doc_hipaa_compliance",
+        "doc_baa_terms",
+        "doc_security_overview",
+        "doc_privacy",
+        "doc_support"
+      ],
+      "metrics": {
+        "mrr": 1.0,
+        "recall": 1.0,
+        "precision": 0.4,
+        "hitrate": 1.0
+      },
+      "ranks": {
+        "doc_hipaa_compliance": 1,
+        "doc_baa_terms": 2
+      },
+      "tags": [
+        "compliance",
+        "high_risk"
+      ],
+      "weight": 3.0,
+      "must_rank_at_most": 5,
+      "must_include_any": true,
+      "forbidden_doc_ids": []
+    },
+    {
+      "id": "public_pricing",
+      "query": "What is public pricing?",
+      "relevant_doc_ids": [
+        "pricing_public"
+      ],
+      "retrieved_doc_ids": [
+        "pricing_public",
+        "doc_pricing_faq",
+        "doc_terms",
+        "doc_signup",
+        "doc_support"
+      ],
+      "metrics": {
+        "mrr": 1.0,
+        "recall": 1.0,
+        "precision": 0.2,
+        "hitrate": 1.0
+      },
+      "ranks": {
+        "pricing_public": 1
+      },
+      "tags": [
+        "security"
+      ],
+      "weight": 1.0,
+      "must_rank_at_most": 3,
+      "must_include_any": false,
+      "forbidden_doc_ids": [
+        "internal_discount_policy"
+      ]
+    }
+  ]
+}
