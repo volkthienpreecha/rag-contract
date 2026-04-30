@@ -6,6 +6,7 @@ pytest-cache-files-*/
 .ruff_cache/
 .venv/
 .tmp/
+.build-tmp/
 dist/
 build/
 *.egg-info/
